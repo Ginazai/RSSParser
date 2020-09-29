@@ -153,6 +153,9 @@ a.list {
 	font-style: italic;
 }
 @media (max-width: 991px) {
+	body {
+		background-color: #fff9e6;
+	}
 	.navbar {
 		height: 70px !important;
 	}
