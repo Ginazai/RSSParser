@@ -94,7 +94,7 @@ li {
 	color: #ffb536 !important;
 }
 
-.footer-mobile {
+.footer {
 	position: relative;
 	bottom: 0px;
 	left: 0px;
@@ -122,9 +122,15 @@ a.list {
 	text-decoration: none !important;
 }
 
-.footer {
-	position: absolute;
+.footer-ex {
+	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 }
+
+@media (max-width: 991px) {
+	.navbar {
+		height: 100px !important;
+	}
+} 
