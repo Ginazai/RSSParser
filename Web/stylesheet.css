@@ -131,6 +131,6 @@ a.list {
 
 @media (max-width: 991px) {
 	.navbar {
-		height: 80px !important;
+		height: 70px !important;
 	}
 } 
