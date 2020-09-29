@@ -94,8 +94,8 @@ li {
 	color: #ffb536 !important;
 }
 
-.footer {
-	position: absolute;
+.footer-mobile {
+	position: relative;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -120,4 +120,11 @@ li {
 a.list {
 	color: black !important;
 	text-decoration: none !important;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
