@@ -12,12 +12,13 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<!-- my resources -->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script type="text/javascript" src="resource/popular_anime_re.js"></script>
+	<script type="text/javascript" src="resource/anime.js"></script>
 	<script type="text/javascript" src="anime_insert.js"></script>
 	<script type="text/javascript" src="index_script.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="resource/anime.js"></script>
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow-sm">
@@ -27,16 +28,17 @@
 		</button></a>
 		<!--end of the button section-->
 	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-
+			<ul class="navbar-nav mr-auto col-lg-4">
 				<li id="drop1" class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anime List</a> 
 					<div class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
-						<div class="dropdown-item"><a class="list" href="mobile.html">List</a></div>
-						<div class="dropdown-divider"></div>
 					</div>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mobile.html">List-only</a>
+				</li>
 			</ul>
+			<h3 class="nav-title nav-item col-lg-8">Crunchyroll Popular Animes</h3>
 		</div>
 		</nav>
 
@@ -64,8 +66,8 @@
 	<div class="container-fluid footer-ex bg-dark">
 		<div class="desclaimer">
 			<div>Anything in this page belongs to me but the code.</div>
-			<div>All data in this page belongs to Crunchyroll. (<a class="f-link" href="https://www.crunchyroll.com/rss/anime/popular?lang=esES">RSS</a>)</div>
-			<div>If you're interest in the project check my <a class="f-link" href="https://github.com/Ginazai/RSSParser">Github repository about it.</a></div>
+			<div>All data in this page belongs to Crunchyroll. (<a class="f-link" href="https://www.crunchyroll.com/rss/anime/popular?lang=enEN">RSS</a>)</div>
+			<div>If you're interest in the project check my <a class="f-link" href="https://github.com/Ginazai/RSSParser">Github repository</a> about it.</div>
 		</div>
 	</div>
 </footer>

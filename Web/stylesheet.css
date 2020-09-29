@@ -10,8 +10,17 @@ a.anime {
 	color: black !important;
 }
 
+a.anime:hover {
+	color: #ffb536 !important;
+}
+
 li {
 	list-style-type: none;
+}
+
+li a.anime{
+	margin: 8px;
+	font-size: 17px;
 }
 
 .dropdown-item {
@@ -23,6 +32,7 @@ li {
 	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	height: 10em;
 	
 }
 
@@ -30,6 +40,13 @@ li {
 	text-align: center;
 	color: #fafafa;
 	font-style: italic;
+}
+
+.m-star {
+	height: 0.8em;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .carousel-image {
@@ -54,7 +71,8 @@ li {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
-	width: 500px;
+	text-align: center;
+	width: 800px;
 }
 
 .whole_carousel {
@@ -79,6 +97,7 @@ li {
 
 .mobile-img {
 	border-radius: 0.8em;
+	height: 16em;
 }
 
 .logo {
@@ -129,8 +148,35 @@ a.list {
 	right: 0px;
 }
 
+.nav-title {
+	color: #ffa30f;
+	font-style: italic;
+}
 @media (max-width: 991px) {
 	.navbar {
 		height: 70px !important;
 	}
+	.description{
+		width: 500px;
+	}
 } 
+
+@media (max-width: 767px) {
+	.description {
+		width: 300px;
+		font-size: 13px;
+	}
+	.anime-title {
+		font-size: 25px;
+		margin-top: 8px;
+	}
+	.d-block {
+		height: 8em;
+	}
+	.mobile-img {
+		height: 9em;
+	}
+	li {
+		margin: 5px;
+	}
+}

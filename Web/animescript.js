@@ -1,14 +1,11 @@
 $(document).ready(function () {
 	$('.carousel').carousel({interval: 10000});
 
-	console.log(popular.length);
-
 	var loc = decodeURI(location);
 	var value = loc.split("?");
 	var kvpair = value[1];
 	var res = kvpair.split("=");
 	var anime = res[1];
-	console.log(anime);
 
 	var c = 0;
 	for (var j = 0; j < popular.length; j++) {
