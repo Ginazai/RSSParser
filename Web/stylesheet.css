@@ -185,4 +185,5 @@ a.list {
 @media (min-width: 0px) and (max-width: 991px) {
 	.nav-title {display: none;}
 	.nav-link{text-align: center !important;}
+	.dropdown-menu {text-align: center !important;}
 }
