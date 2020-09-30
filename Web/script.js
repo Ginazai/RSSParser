@@ -1,6 +1,8 @@
 $(document).ready( function () {
-
-	function twoElementsDrop(element, child, secondChild) {
+	var width = window.innerWidth;
+	if (width > 991) {
+		console.log(width);
+		function twoElementsDrop(element, child, secondChild) {
 		$(element).hover(function () {
 			var child1 = $(element).children(child);
 			var secChild = $(element).children(secondChild);
@@ -19,6 +21,6 @@ $(document).ready( function () {
 	}
 
 	twoElementsDrop('#drop1', '.dropdown-toggle', '.dropdown-menu');
-
 	
+	}	
 });
