@@ -207,7 +207,14 @@ a.list {
 
 @media (min-width: 0px) and (max-width: 991px) {
 	.nav-title {display: none;}
-	.nav-link{text-align: center !important;}
+	.nav-item {
+		font-size: 22px;
+		text-align: center !important;
+	}
+	li a.anime{
+		text-align: center !important;
+		font-size: 22px;
+	}
 	.dropdown-menu {text-align: center !important;}
 	.navbar {
 		min-height: 71px;
