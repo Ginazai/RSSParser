@@ -50,7 +50,6 @@ li a.anime{
 }
 
 .carousel-image {
-	border-color: red !important;
 	border-width: 10px;
 	border: 10px;
 	border-radius: 0.8em;
@@ -156,12 +155,11 @@ a.list {
 	body {
 		background-color: #fff9e6;
 	}
-	.navbar {
-		height: 70px !important;
-	}
+
 	.description{
-		width: 500px;
+		width: 500px
 	}
+
 } 
 
 @media (max-width: 767px) {
@@ -182,4 +180,9 @@ a.list {
 	li {
 		margin: 5px;
 	}
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+	.nav-title {display: none;}
+	.nav-link{text-align: center !important;}
 }
