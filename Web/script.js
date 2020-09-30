@@ -1,7 +1,6 @@
 $(document).ready( function () {
 	var width = window.innerWidth;
 	if (width > 991) {
-		console.log(width);
 		function twoElementsDrop(element, child, secondChild) {
 		$(element).hover(function () {
 			var child1 = $(element).children(child);

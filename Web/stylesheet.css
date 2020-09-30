@@ -1,5 +1,6 @@
 body {
 	background-color: #fffcf2;
+	font-family: 'El Messiri', sans-serif;
 }
 
 a {
@@ -40,6 +41,7 @@ li a.anime{
 	text-align: center;
 	color: #fafafa;
 	font-style: italic;
+	margin-top: 12px;
 }
 
 .m-star {
@@ -150,14 +152,35 @@ a.list {
 .nav-title {
 	color: #ffa30f;
 	font-style: italic;
+	margin-top: auto;
+	margin-bottom: auto;
 }
-@media (max-width: 991px) {
+.watch {
+	color: #ffb536;
+}
+
+.watch:hover {
+	color: white;
+}
+
+@media (min-width: 992) and (max-width: 1199px) {
+	.description {
+		width: 200px !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
 	body {
 		background-color: #fff9e6;
 	}
 
+	.anime-title {
+		font-size: 30px;
+	}
+
 	.description{
-		width: 500px
+		width: 550px;
+		font-size: 16px;
 	}
 
 } 
@@ -186,4 +209,8 @@ a.list {
 	.nav-title {display: none;}
 	.nav-link{text-align: center !important;}
 	.dropdown-menu {text-align: center !important;}
+	.navbar {
+		min-height: 71px;
+		width: 100%;
+	}
 }
