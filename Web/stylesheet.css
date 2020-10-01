@@ -98,7 +98,15 @@ li a.anime{
 
 .mobile-img {
 	border-radius: 0.8em;
-	height: 16em;
+	height: 12em;
+	margin: 18px;
+}
+
+.an-list {
+	text-align: center;
+	color: #ffb536;
+	margin: 15px;
+	margin-bottom: 30px;
 }
 
 .logo {
@@ -137,6 +145,10 @@ li a.anime{
 	color: white;
 }
 
+h3.an-list a {
+	color: black !important;
+}
+
 a.list {
 	color: black !important;
 	text-decoration: none !important;
@@ -151,7 +163,7 @@ a.list {
 
 .nav-title {
 	color: #ffa30f;
-	font-style: italic;
+	padding: 0px;
 	margin-top: auto;
 	margin-bottom: auto;
 }

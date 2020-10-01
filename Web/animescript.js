@@ -24,11 +24,15 @@ $(document).ready(function () {
 		if (anime == an) {
 			$('.carousel-inner').append('<div class="carousel-item container"><h1 class="anime-title">' + an + '</h1><h3 class="anime-title">Chapter '+ chap_num +': '  + '</h3><img class="d-block carousel-image" src="'+link +'" alt="Third slide"/>\
 			<div class="container description">'+ desc +'<section><a class="watch" href="'+ vid_link +'"> (Watch now !)</a></section></div></div>');
+			if ( c < 1 ) {
+				$('.nav-title').append(an);
+			}	
 			if (c < 50) {
-			$('.carousel-indicators').append('<li data-target="#mycarousel" data-slide-to="' + c + '" class="active"></li>');
+			$('.carousel-indicators').append('<li class="select" data-target="#mycarousel" data-slide-to="' + c + '"></li>');
 			}
 			if (c < 1) {
 			$('.carousel-item').toggleClass('active');
+			$('.select').toggleClass('active');
 			}
 			c++;
 		}
