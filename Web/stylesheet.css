@@ -11,8 +11,16 @@ a.anime {
 	color: black !important;
 }
 
+a.anime-l {
+	color: #ffb536;
+}
+
 a.anime:hover {
 	color: #ffb536 !important;
+}
+
+a.anime-l:hover {
+	color: white;
 }
 
 li {
@@ -22,6 +30,22 @@ li {
 li a.anime{
 	margin: 8px;
 	font-size: 17px;
+}
+
+.anime-card {
+	max-height: 400px;
+	margin: 20px;
+}
+
+.anime-img {
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 10em;
+	border-radius: .8em;
+}
+
+.btn-warning {
+	background-color: #ffb536 !important;
 }
 
 .dropdown-item {
