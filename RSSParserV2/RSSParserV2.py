@@ -140,8 +140,8 @@ def createJs():
         an = input('\n(Enter to skip) Anime data container: \n');
         if (an == ""): an = 'animes';
 
-    fh = codecs.open(ep_db + '.js', 'w', 'utf-8');
-    af = codecs.open(an_db + '.js', 'w', 'utf-8');
+    fh = codecs.open('../Web/resource/'+ ep_db + '.js', 'w', 'utf-8');
+    af = codecs.open('../Web/resource/'+ an_db + '.js', 'w', 'utf-8');
     fh.write(en + ' = [\n');
     af.write(an + ' = [\n');
 
