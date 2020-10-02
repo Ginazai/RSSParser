@@ -1,4 +1,3 @@
-import re;
 import feedparser;
 import sqlite3;
 import urllib.request, urllib.parse, urllib.error;
@@ -14,12 +13,14 @@ def load(msg = "", t = int, hmt = int):
         time.sleep(t);
         i +=1;
 
-db = input('Create a Database (keep in mind that reuse names or leave empty fields will not make any changes if the default or especified database exists)\n');
+db = input('\nCreate a Database (keep in mind that reuse names or leave empty fields will not make any changes if the default or especified database exists and it will add all new content if the page is updated)\n');
 if (db == None or db == ""): db = 'myDatabase';
+web = input('(skip for default)The program would work at it best only with the "Popular Animes" from crunchyroll RSS, but you can try whatever you wish:\n');
+if (web == "" or web == None): web = "https://www.crunchyroll.com/rss/anime/popular?lang=enEN";
 
 def searchData():
     load("connecting", 1, 3);
-    page = 'https://www.crunchyroll.com/rss/anime/popular?lang=enEN';
+    page = web;
     url = urllib.request.urlopen(page).read().decode();
     feedp = feedparser.parse(url);
 
@@ -91,7 +92,7 @@ def searchData():
             found = cursor.fetchone()[0];
             print("\n######################| " + found + " was already in |######################");
             j += 1;
-            if (j == i): print('\nNo changes have been been made.');
+            if (j == i): print('\nNo changes have been made.');
             continue;
         except:
             pass
@@ -108,6 +109,13 @@ def searchData():
     con.close();
 
 
+def confirm(quest = "", default = ""):
+    param = input(quest);
+    if (param == "0"):
+        param = default;
+    return param;
+
+
 def createJs():
     con = sqlite3.connect(db + '.sqlite');
     cursor = con.cursor();
@@ -115,18 +123,26 @@ def createJs():
     cursor.execute('''SELECT anime_title, episode_title, desc, image, link, chapter, minutes, seconds 
                   FROM episode INNER JOIN anime ON anime.id = episode.anime_id''');
 
-    ep_db = input('\n(Enter to skip) Give a name to your ".js" file, it will contain the episodes data (leave the fill empty or assign a name from an existing ".js" in the same folder results in overwrite):\n');
-    an_db = input('\n(Enter to skip) Give a name to your anime database, as you can assume it save only the existing animes:\n');
-    if (ep_db == "" or ep_db == None): ep_db = "episodes";
-    if (an_db == "" or an_db == None): an_db = "animes";
+    defv =  "popular_anime_re";
+
+    ep_db = confirm('\n(Enter to skip, 0 to skip all) Give a name to your ".js" file, it will contain the episodes data (leave the fill empty or assign a name from an existing ".js" in the same folder results in overwrite):\n', defv);
+    if (defv == ep_db):
+        an_db = "anime";
+        en = 'popular';
+        an = 'animes';
+    else:
+        ep_db = ep_db;
+        if (ep_db == ""): ep_db = defv;
+        an_db = input('\n(Enter to skip) Give a name to your anime database, as you can assume it save only the existing animes:\n');
+        if (an_db == ""): an_db = "anime";
+        en = input('\n(Enter to skip) Alternativly you can give a name for each data container (i.e. animes = []).\nOnly the name is needed:\n');
+        if (en == ""): en = 'popular';
+        an = input('\n(Enter to skip) Anime data container: \n');
+        if (an == ""): an = 'animes';
+
     fh = codecs.open(ep_db + '.js', 'w', 'utf-8');
     af = codecs.open(an_db + '.js', 'w', 'utf-8');
-
-    en = input('\n(Enter to skip) Alternativly you can give a name for each data container (i.e. animes = []).\nOnly the name is needed:\n');
-    if (en == "" or en == None): en = 'popular';
     fh.write(en + ' = [\n');
-    an = input('(Enter to skip) Anime data container: \n');
-    if (an == "" or an == None): an = 'animes';
     af.write(an + ' = [\n');
 
     i = -1;
@@ -144,6 +160,7 @@ def createJs():
         episode_ti = pre_ep.replace('"', "'");
 
         predesc = row[2].replace('"', "'");
+        predesc = predesc.replace("\n", " ");
         desc = predesc;
 
         img_link = row[3];
