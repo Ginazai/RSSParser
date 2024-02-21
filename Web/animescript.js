@@ -22,7 +22,7 @@ $(document).ready(function () {
 			desc = "(no description was found).";
 		}
 		if (anime == an) {
-			$('.carousel-inner').append('<div class="carousel-item container"><h1 class="anime-title">' + an + '</h1><h3 class="anime-title">Chapter '+ chap_num +': '  + '</h3><img class="d-block carousel-image" src="'+link +'" alt="Third slide"/>\
+			$('.carousel-inner').append('<div class="carousel-item"><h1 class="anime-title">' + an + '</h1><h3 class="anime-title">Chapter '+ chap_num +': '  + '</h3><img class="d-block carousel-image" src="'+link +'" alt="Third slide"/>\
 			<div class="container description">'+ desc +'<section><a class="watch" href="'+ vid_link +'"> (Watch now !)</a></section></div></div>');
 			if ( c < 1 ) {
 				$('.nav-title').append(an);
