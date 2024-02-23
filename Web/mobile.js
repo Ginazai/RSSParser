@@ -15,7 +15,7 @@ $(document).ready(function () {
 			var crunchy = an_link[anime][1];
 			//$('.anime-list').append('<div class="col-lg-4 s-anime"><a href="anime.html?anime=' + encodeURI(anime) + '"><img class="mobile-img" src="'+ to_insert +'"/></a><li><img class="m-star" src="images/PNGPIX-COM-Star-Vector-PNG-Transparent-Image.png"/>\
 				//<a class="anime" href="anime.html?anime=' + encodeURI(anime) + '">' + anime + '</a><img class="m-star" src="images/PNGPIX-COM-Star-Vector-PNG-Transparent-Image.png"></li></div>');
-			$('.a-card').append('<div class="card text-center anime-card bg-dark"><div class="card-header"><a class="anime-l" href="anime.html?anime='+  encodeURI(anime) +'"><h3>' + 
+			$('.a-card').append('<div class="card text-center anime-card bg-dark shadow-lg"><div class="card-header"><a class="anime-l" href="anime.html?anime='+  encodeURI(anime) +'"><h3>' + 
 				anime +'</h3></a></div><div class="card-body"><a href="anime.html?anime=' + encodeURI(anime) + '"><img class="anime-img" src="' + to_insert + '">\
 				</a></div><div class="card-footer"><a href="'+ crunchy +'" class="btn btn-warning">Watch now !</a></div></div>');
 		}
