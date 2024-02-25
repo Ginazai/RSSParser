@@ -1,6 +1,12 @@
 $(document).ready(function () {
+	//modify the carousel automatic transition speed
 	$('.carousel').carousel({interval: 10000});
+	/*
 
+	"popular" variable is being retrieve from resource/popular_anime.js
+	it contain
+
+	*/
     var x = 0;
 	for (var i = 0; i < popular.length; i++) {
 		var div = document.getElementById('poorme')
